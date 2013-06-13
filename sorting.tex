@@ -1,0 +1,57 @@
+\section{Sorting}
+
+\begin{tabular}[t]{p{2cm} | p{3cm} | p{1cm} | p{1cm} | p{1cm} | p{3cm}}
+
+\bf{Name} & \bf{Description} & \bf{Avg Time} & \bf{Worst Time} & \bf{Worst Space} &  \bf{Picture} \\
+
+\hline
+
+Depth First Search (DFS) 
+& Search as far down each branch before backtracking.
+ & - & $O(|E|+|V|)$ & $O(|V|)$ & 
+\begin{tikzpicture}[every node/.style={circle,draw,fill=blue!20,scale=.75}, baseline=(current bounding box.north), scale=.5]
+\node{1}
+	child{node{2}
+		child{node{3}
+			child{node{4}}
+			child{node{5}}
+		}
+		child{node{6}}
+	}
+	child{node{7}}
+	child{node{8}
+		child{node{9}
+			child{node{10}}
+			child{node{11}}
+		}
+		child{node{12}}
+	}
+;
+\end{tikzpicture}
+ \\
+\hline
+
+Breadth First Search (BFS) & (a) visit and inspect a node of a graph; (b) gain access to visit the nodes that neighbor the currently visited node. & - & $O(|E|+|V|)$ & $O(|V|) $
+\begin{tikzpicture}[every node/.style={circle,draw,fill=blue!20,scale=.75}, scale=.5]
+\node{1}
+	child{node{2}
+		child{node{5}
+			child{node{9}}
+			child{node{10}}
+		}
+		child{node{6}}
+	}
+	child{node{3}}
+	child{node{4}
+		child{node{7}
+			child{node{11}}
+			child{node{12}}
+		}
+		child{node{8}}
+	}
+;
+\end{tikzpicture}
+ \\
+
+
+\end{tabular}
